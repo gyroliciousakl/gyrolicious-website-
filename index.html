@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gyrolicious | Greek Street Food & Catering Auckland</title>
+<meta name="description" content="Gyrolicious serves Greek street food, souvlaki and catering from Hillcrest, Auckland. Open Wednesday to Sunday from 6pm until sold out.">
+<meta name="theme-color" content="#072a5c">
+<style>
+:root{
+  --ink:#0e1a2a;--navy:#082c62;--navy2:#051e44;--blue:#0c4da2;--sky:#dff1ff;
+  --paper:#fbf8f1;--white:#fff;--muted:#667085;--line:#d9e2ec;--gold:#c79a3b;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+.topbar{background:var(--navy2);color:#fff;font-size:12px}.topbar .wrap{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;padding:9px 0}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(8,44,98,.09)}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:66px;height:66px;object-fit:contain;border-radius:50%}
+.brand span{font:700 18px Georgia,serif;letter-spacing:.12em;color:var(--navy)}
+.links{display:flex;gap:23px;align-items:center;font-size:13px;font-weight:700}.links a:hover{color:var(--blue)}
+.pill{background:var(--navy);color:#fff!important;padding:11px 16px;border-radius:999px}
+.hero{position:relative;min-height:760px;overflow:hidden;background:var(--navy2)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,19,43,.92) 0%,rgba(3,19,43,.72) 38%,rgba(3,19,43,.18) 74%,rgba(3,19,43,.08))}
+.hero-copy{position:relative;z-index:2;color:#fff;max-width:700px;padding:130px 0 110px}
+.ey{font-size:12px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:#b9dcff}.script{font-family:Georgia,serif;font-style:italic;color:#9fd1ff}
+h1,h2,h3{font-family:Georgia,serif;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(54px,7vw,92px);margin:14px 0 18px}.hero p{font-size:20px;color:#edf4fb;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:999px;font-weight:800}
+.btn.light{background:#fff;color:var(--navy)}.btn.ghost{border:1px solid rgba(255,255,255,.7);color:#fff}
+.info{background:var(--navy);color:#fff}.info .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.info article{padding:22px 25px;border-right:1px solid rgba(255,255,255,.15)}.info article:last-child{border:0}.info small{display:block;color:#9dd1ff;font-weight:800;letter-spacing:.12em;margin-bottom:5px}
+.section{padding:100px 0}.paper{background:var(--paper)}.dark{background:var(--navy2);color:#fff}
+.kicker{font-size:12px;letter-spacing:.18em;color:var(--blue);font-weight:800;text-transform:uppercase}.dark .kicker{color:#9fd1ff}
+h2{font-size:clamp(42px,5vw,66px);margin:10px 0 20px}.lead{font-size:19px;color:var(--muted);max-width:720px}.dark .lead{color:#cbd9e8}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}.story-media{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.story-media img{width:100%;height:340px;object-fit:cover;border-radius:4px}.story-media img:first-child{grid-row:span 2;height:692px}
+.rule{width:80px;height:2px;background:var(--gold);margin:22px 0}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.menu-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 12px 32px rgba(10,35,68,.05)}
+.menu-card.featured{border:2px solid var(--blue);background:#f5f9ff}.menu-head{display:flex;justify-content:space-between;gap:14px;align-items:start}.menu-card h3{font-size:22px;margin:0}.price{font-size:20px;font-weight:800;color:var(--blue);white-space:nowrap}.menu-card p{color:var(--muted);font-size:14px}
+.feature-band{margin-top:22px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--navy);color:#fff;border-radius:22px;overflow:hidden}
+.feature-band img{width:100%;height:440px;object-fit:cover}.feature-copy{padding:48px}.feature-copy h3{font-size:38px;margin:10px 0}.feature-copy p{color:#d4e0ee}
+.drinks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.drink{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}.drink img{height:260px;width:100%;object-fit:cover}.drink div{padding:18px}.drink h3{font-size:20px;margin:0 0 7px}.drink p{margin:0;color:var(--muted)}
+.catering-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.catering-intro img{width:100%;height:470px;object-fit:cover;border-radius:4px}
+.packages{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px}.pkg{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;position:relative}.pkg.premium{border:2px solid var(--blue)}.pkg h3{font-size:28px;margin:8px 0 16px}.pkg-price{position:absolute;right:24px;top:24px;color:var(--blue);font-size:30px;font-weight:800}.pkg ul{padding-left:20px;color:var(--muted)}
+.policy{margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.policy div{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}.policy b{display:block;color:var(--navy);margin-bottom:6px}.policy span{font-size:13px;color:var(--muted)}
+.preorder{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.preorder img{height:500px;width:100%;object-fit:cover;border-radius:4px}.callout{background:#fff;border:1px solid #cfe0f5;border-left:5px solid var(--blue);padding:22px;border-radius:12px;margin-top:20px}
+.inquiry{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.form{background:#fff;color:var(--ink);padding:26px;border-radius:20px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form label{display:block;font-size:12px;font-weight:800;margin-bottom:12px}.form input,.form select,.form textarea{width:100%;padding:12px 13px;margin-top:6px;border:1px solid #cbd7e3;border-radius:12px;font:inherit}.form button{width:100%;border:0;border-radius:999px;background:var(--blue);color:#fff;padding:14px;font-weight:800}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.socials a{border:1px solid rgba(255,255,255,.35);padding:10px 14px;border-radius:999px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.gallery img{width:100%;height:240px;object-fit:cover}.gallery img:nth-child(2),.gallery img:nth-child(5){grid-row:span 2;height:490px}
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px}.visit-boxes{display:grid;grid-template-columns:1fr 1fr;gap:12px}.visit-boxes div,.visit-boxes a{border:1px solid #ffffff2d;padding:20px;border-radius:16px}.visit-boxes small{display:block;color:#9fd1ff;letter-spacing:.12em;font-weight:800;margin-bottom:5px}
+footer{background:#06162d;color:#aebdd0;padding:40px 0 22px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.footer-grid img{width:92px;height:92px;object-fit:contain;border-radius:50%;background:#fff}.footer-grid h4{color:#fff;margin:0 0 12px}.footer-grid a{display:block;margin:6px 0}.foot-bottom{border-top:1px solid #ffffff1f;margin-top:26px;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mobile{display:none}
+@media(max-width:900px){.links{display:none}.mobile{display:block;color:var(--navy);font-weight:800}.hero{min-height:680px}.hero:after{background:linear-gradient(0deg,rgba(3,19,43,.94),rgba(3,19,43,.25))}.hero-copy{padding:230px 0 80px}.info .wrap{grid-template-columns:1fr 1fr}.info article:nth-child(2){border-right:0}.story,.catering-intro,.preorder,.inquiry,.visit{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr 1fr}.drinks{grid-template-columns:1fr 1fr}.policy{grid-template-columns:1fr 1fr}.feature-band{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.story-media img:first-child{height:500px}.story-media img{height:244px}}
+@media(max-width:600px){.topbar .wrap{gap:8px;text-align:center}.brand span{display:none}.hero h1{font-size:50px}.hero-copy{padding-top:260px}.info .wrap,.menu-grid,.drinks,.packages,.policy,.visit-boxes,.row{grid-template-columns:1fr}.info article{border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}.section{padding:72px 0}.story-media{grid-template-columns:1fr}.story-media img,.story-media img:first-child{height:300px}.gallery{grid-template-columns:1fr 1fr}.gallery img,.gallery img:nth-child(2),.gallery img:nth-child(5){height:200px;grid-row:auto}.feature-copy{padding:30px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Wed–Sun · 6:00pm until sold out</span><span>Preorders close daily at 4:00pm</span><span>Peak hours 6:00pm–7:20pm</span></div></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><img src="assets/logo.webp" alt="Gyrolicious official logo"><span>GYROLICIOUS</span></a>
+    <nav class="links">
+      <a href="#story">Our Story</a><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#preorder">Preorder</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a class="pill" href="#inquiry">Book Us</a>
+    </nav>
+    <span class="mobile">MENU</span>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <img src="assets/truck.webp" alt="Gyrolicious food truck">
+  <div class="wrap"><div class="hero-copy">
+    <div class="ey">Greek street food · Hillcrest, Auckland</div>
+    <h1>A taste of <span class="script">Greece</span><br>after dark.</h1>
+    <p>Bold souvlaki, house-made grilled pita, Greek drinks and catering — served from our blue food truck with plenty of heart.</p>
+    <div class="actions"><a class="btn light" href="#menu">Explore the menu</a><a class="btn ghost" href="#catering">Catering & events</a></div>
+  </div></div>
+</section>
+
+<section class="info"><div class="wrap">
+  <article><small>OPENING HOURS</small><b>Wednesday to Sunday · 6:00pm until sold out</b></article>
+  <article><small>LOCATION</small><b>Opposite 237 Glenfield Road, Hillcrest, Auckland 0627</b></article>
+  <article><small>PREORDER CUTOFF</small><b>Daily at 4:00pm</b></article>
+  <article><small>PEAK HOURS</small><b>6:00pm–7:20pm · preorder recommended</b></article>
+</div></section>
+
+<section id="story" class="section paper">
+<div class="wrap story">
+  <div>
+    <div class="kicker">Our story</div>
+    <h2>Street food with Greek magic.</h2>
+    <div class="rule"></div>
+    <p class="lead">Gyrolicious is built around generous food, warm hospitality and the flavours that make Greek street food unforgettable.</p>
+    <p>From sizzling grilled meat to warm house-made pita, crisp salad, tzatziki and punchy sumac onion, we keep things fresh, satisfying and full of character. Find us in Hillcrest, or bring the truck to your own celebration.</p>
+  </div>
+  <div class="story-media">
+    <img src="assets/grill.webp" alt="Souvlaki grilling">
+    <img src="assets/pita.webp" alt="House-made grilled pita">
+    <img src="assets/mealbox.webp" alt="Gyrolicious souvlaki meal box">
+  </div>
+</div>
+</section>
+
+<section id="menu" class="section">
+<div class="wrap">
+  <div class="kicker">Our menu</div><h2>Greek street-food favourites.</h2>
+  <p class="lead">The current menu and prices below reflect the menu supplied by Gyrolicious. Availability may vary when items sell out.</p>
+  <div class="menu-grid">
+    <article class="menu-card"><div class="menu-head"><h3>Lamb Souvlaki</h3><span class="price">$23.00</span></div><p>Grilled lamb pieces with tomato, sumac onion, chips, tzatziki, mesclun salad & pickled golden sweet peppers in warm house-made grilled pita.</p></article>
+    <article class="menu-card"><div class="menu-head"><h3>Chicken Souvlaki</h3><span class="price">$19.50</span></div><p>Grilled chicken pieces with tomato, sumac onion, chips, tzatziki, mesclun salad & pickled golden sweet peppers in warm house-made grilled pita.</p></article>
+    <article class="menu-card featured"><div class="menu-head"><h3>Mixed Souvlaki</h3><span class="price">$21.00</span></div><p>Grilled chicken & lamb pieces with tomato, sumac onion, chips, tzatziki, mesclun salad & pickled golden sweet peppers in warm house-made grilled pita.</p></article>
+    <article class="menu-card"><div class="menu-head"><h3>Vegie Souvlaki</h3><span class="price">$19.00</span></div><p>Falafels, chips, sumac onion, tomato, tzatziki, mesclun salad & pickled golden sweet peppers in warm house-made grilled pita.</p></article>
+    <article class="menu-card"><div class="menu-head"><h3>Lamb Souvlaki Meal Box</h3><span class="price">$25.00</span></div><p>Grilled lamb, tzatziki, pita, mesclun greens, sumac onion, tomatoes, crumbed feta, pickled golden sweet peppers & chips.</p></article>
+    <article class="menu-card"><div class="menu-head"><h3>Chicken Souvlaki Meal Box</h3><span class="price">$21.00</span></div><p>Grilled chicken, tzatziki, pita, mesclun greens, sumac onion, tomatoes, crumbed feta, pickled golden sweet peppers & chips.</p></article>
+  </div>
+  <div class="feature-band">
+    <img src="assets/mealbox.webp" alt="Gyrolicious meal box">
+    <div class="feature-copy"><div class="ey">Fresh from the truck</div><h3>Generous. Fresh. Built for dinner.</h3><p>Our deconstructed meal boxes bring together grilled meat, tzatziki, pita, greens, crumbed feta, pickled golden sweet peppers and chips.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section paper">
+<div class="wrap">
+  <div class="kicker">Greek drinks & dessert</div><h2>Something cold. Something sweet.</h2>
+  <div class="drinks">
+    <article class="drink"><img src="assets/lemon.webp" alt="Loux Greek Lemonade"><div><h3>Loux Greek Lemonade</h3><p>Lemonade flavoured soft drink · <b>$4.00</b></p></div></article>
+    <article class="drink"><img src="assets/orange.webp" alt="Loux Orange Soda"><div><h3>Loux Orange Soda</h3><p>Greek orange soft drink · <b>$4.00</b></p></div></article>
+    <article class="drink"><img src="assets/cherry.webp" alt="Loux Sour Cherry"><div><h3>Sour Cherry Sparkling Juice</h3><p>Loux natural sparkling cherry juice · <b>$4.00</b></p></div></article>
+    <article class="drink"><img src="assets/loukoumades.webp" alt="Loukoumades"><div><h3>Loukoumades</h3><p>10pcs Greek donuts with chocolate sauce, crushed hazelnuts & pistachios · <b>$12.00</b></p></div></article>
+  </div>
+</div>
+</section>
+
+<section id="catering" class="section">
+<div class="wrap">
+  <div class="catering-intro">
+    <div><div class="kicker">Catering & events</div><h2>We cater.<br><span class="script">You celebrate.</span></h2><p class="lead">Weddings, birthdays, workplace functions, private parties and special events — bring Gyrolicious to your crowd.</p></div>
+    <img src="assets/mealbox.webp" alt="Gyrolicious catering food">
+  </div>
+  <div class="packages">
+    <article class="pkg"><div class="kicker">Option 01</div><div class="pkg-price">$35 <small>p/p</small></div><h3>Classic Catering</h3><ul><li>Starter: Greek spinach, feta & pine nut filo pie</li><li>Main: Mix souvlaki meal box with chicken & lamb skewers, tzatziki, Greek pita, fries & salad</li><li>Greek sparkling drink: lemonade, orange or sour cherry</li></ul></article>
+    <article class="pkg premium"><div class="kicker">Option 02</div><div class="pkg-price">$40 <small>p/p</small></div><h3>Catering + Dessert</h3><ul><li>Starter: Greek spinach, feta & pine nut filo pie</li><li>Main: Mix souvlaki meal box</li><li>Dessert: Rolled kataifi bites or portokalopita</li><li>Greek sparkling drink: lemonade, orange or sour cherry</li></ul></article>
+  </div>
+  <div class="policy">
+    <div><b>Booking</b><span>All bookings are subject to availability. Signed confirmation and deposit secure your date.</span></div>
+    <div><b>Deposit</b><span>A non-refundable 30% deposit is required. Full payment is due 7 days before the event.</span></div>
+    <div><b>Guest count</b><span>Final guest count is required 7 days before the event. Extra guests may incur charges.</span></div>
+    <div><b>Weather & access</b><span>Suitable setup access and parking are required. For extreme weather, we’ll work with you on the best solution.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="preorder" class="section paper">
+<div class="wrap preorder">
+  <div><div class="kicker">Preorder</div><h2>Beat the dinner rush.</h2><p class="lead">Our daily preorder cutoff is <b>4:00pm</b>. Peak hours are usually <b>6:00pm–7:20pm</b>.</p><div class="callout"><b>We highly recommend preordering in advance.</b><br>Walk-up wait times can be longer during the peak period, and we operate until sold out.</div></div>
+  <img src="assets/pita.webp" alt="House-made pita grilling">
+</div>
+</section>
+
+<section id="inquiry" class="section dark">
+<div class="wrap inquiry">
+  <div><div class="kicker">Book Gyrolicious</div><h2>Catering inquiry.</h2><p class="lead">Tell us your date, event type, location and estimated guest count. The form will prepare an email to our team.</p><div class="socials"><a target="_blank" rel="noopener" href="https://www.instagram.com/gyroliciousakl?igsi=NHJ1cGdqZDI1OGEx">Instagram</a><a target="_blank" rel="noopener" href="https://www.facebook.com/share/1CwUhEkfAn/?mibextid=wwXIfr">Facebook</a></div></div>
+  <form class="form" id="cateringForm">
+    <div class="row"><label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label></div>
+    <div class="row"><label>Phone<input name="phone"></label><label>Event date<input type="date" name="date"></label></div>
+    <div class="row"><label>Estimated guests<input type="number" min="1" name="guests"></label><label>Package<select name="package"><option>Not sure yet</option><option>Option 01 — $35 p/p</option><option>Option 02 — $40 p/p</option></select></label></div>
+    <label>Event details<textarea rows="5" name="message" placeholder="Event type, venue/location, timing and anything else we should know..."></textarea></label>
+    <button type="submit">Send catering inquiry</button>
+  </form>
+</div>
+</section>
+
+<section id="gallery" class="section">
+<div class="wrap"><div class="kicker">From our kitchen & truck</div><h2>Follow the journey.</h2>
+  <div class="gallery">
+    <img src="assets/grill.webp" alt="Souvlaki on grill"><img src="assets/truck.webp" alt="Gyrolicious food truck"><img src="assets/mealbox.webp" alt="Meal box"><img src="assets/pita.webp" alt="Grilled pita"><img src="assets/loukoumades.webp" alt="Loukoumades"><img src="assets/cherry.webp" alt="Greek sour cherry drink">
+  </div>
+</div>
+</section>
+
+<section id="visit" class="section dark">
+<div class="wrap visit">
+  <div><div class="kicker">Visit us</div><h2>Hillcrest, Auckland.</h2><p class="lead">Find the Gyrolicious truck opposite 237 Glenfield Road.</p></div>
+  <div class="visit-boxes">
+    <div><small>ADDRESS</small><b>Opposite 237 Glenfield Road, Hillcrest, Auckland 0627</b></div>
+    <div><small>HOURS</small><b>Wednesday–Sunday · 6:00pm until sold out</b></div>
+    <a href="tel:0211999881"><small>PHONE</small><b>021 199 9881</b></a>
+    <a href="mailto:gyrolicious.co.nz@gmail.com"><small>EMAIL</small><b>gyrolicious.co.nz@gmail.com</b></a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="footer-grid">
+    <div><img src="assets/logo.webp" alt="Gyrolicious logo"><p>Greek street food, food-truck service and catering in Auckland.</p></div>
+    <div><h4>Quick links</h4><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#preorder">Preorder</a><a href="#visit">Visit us</a></div>
+    <div><h4>Follow us</h4><a target="_blank" rel="noopener" href="https://www.instagram.com/gyroliciousakl?igsi=NHJ1cGdqZDI1OGEx">Instagram</a><a target="_blank" rel="noopener" href="https://www.facebook.com/share/1CwUhEkfAn/?mibextid=wwXIfr">Facebook</a></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Gyrolicious. All rights reserved.</span><span>gyrolicious.co.nz</span></div>
+</div></footer>
+
+<script>
+document.getElementById('cateringForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const d=new FormData(this);
+  const subject=encodeURIComponent('Gyrolicious catering inquiry — '+(d.get('name')||''));
+  const body=encodeURIComponent(`Hi Gyrolicious,
+
+I'd like to enquire about catering.
+
+Name: ${d.get('name')||''}
+Email: ${d.get('email')||''}
+Phone: ${d.get('phone')||''}
+Event date: ${d.get('date')||''}
+Estimated guests: ${d.get('guests')||''}
+Package: ${d.get('package')||''}
+
+Event details:
+${d.get('message')||''}
+
+Thank you.`);
+  window.location.href=`mailto:gyrolicious.co.nz@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
