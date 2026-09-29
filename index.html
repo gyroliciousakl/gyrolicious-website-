@@ -412,8 +412,8 @@ body {
   <div class="closure-wrap">
     <div class="closure-icon" aria-hidden="true">⚠</div>
     <div class="closure-copy">
-      <strong>Closed Wednesday 16 September</strong>
-      <span>We’ll be closed for facility maintenance and will be back from Thursday 17 September onwards. Thank you for your understanding 💙</span>
+      <strong>Closed Today — Wednesday 30 September</strong>
+      <span>Due to a technical issue, we are closed today. We’ll be back from Thursday onwards. Thank you for your understanding 💙</span>
     </div>
   </div>
 </div>
@@ -691,9 +691,9 @@ function closePreorderNotice(){
 
   const aucklandDate = `${values.year}-${values.month}-${values.day}`;
 
-  // Show from Monday 14 September 2026 through Thursday 17 September 2026.
-  // It automatically disappears at 12:00am Friday 18 September (Auckland time).
-  if (aucklandDate >= '2026-09-14' && aucklandDate <= '2026-09-17') {
+  // Show only on Wednesday 30 September 2026.
+  // It automatically disappears at 12:00am Thursday 1 October (Auckland time).
+  if (aucklandDate === '2026-09-30') {
     banner.style.display = 'block';
   }
 })();
