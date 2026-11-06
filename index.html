@@ -341,82 +341,57 @@ body {
 
 </style>
 
-<style id="temporary-closure-highlight-style">
-  #temporaryClosureHighlight{
-    display:none;
-    background:linear-gradient(135deg,#fff4bf 0%,#ffd95a 100%);
-    color:#123d73;
-    border-top:1px solid rgba(18,61,115,.15);
-    border-bottom:3px solid #123d73;
-    box-shadow:0 8px 22px rgba(18,61,115,.12);
-  }
-  #temporaryClosureHighlight .closure-wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:15px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    text-align:center;
-    font-weight:800;
-  }
-  #temporaryClosureHighlight .closure-icon{
-    width:42px;
-    height:42px;
-    min-width:42px;
-    border-radius:50%;
-    background:#123d73;
-    color:#fff;
-    display:grid;
-    place-items:center;
-    font-size:20px;
-  }
-  #temporaryClosureHighlight .closure-copy{
-    line-height:1.35;
-  }
-  #temporaryClosureHighlight .closure-copy strong{
-    display:block;
-    font-size:18px;
-    letter-spacing:.02em;
-    text-transform:uppercase;
-  }
-  #temporaryClosureHighlight .closure-copy span{
-    display:block;
-    margin-top:3px;
-    font-size:14px;
-    font-weight:700;
-  }
-  @media (max-width:640px){
-    #temporaryClosureHighlight .closure-wrap{
-      align-items:flex-start;
-      padding:13px 14px;
-      gap:10px;
-    }
-    #temporaryClosureHighlight .closure-icon{
-      width:36px;
-      height:36px;
-      min-width:36px;
-      font-size:17px;
-    }
-    #temporaryClosureHighlight .closure-copy strong{font-size:15px;}
-    #temporaryClosureHighlight .closure-copy span{font-size:13px;}
-  }
+
+
+
+<style id="weather-closure-style">
+#weatherClosureBanner{display:none;background:#ffe49b;color:#102f60;padding:13px 20px;text-align:center;font-weight:800;border-bottom:3px solid #173e76}
+#weatherClosureOverlay{display:none;position:fixed;inset:0;z-index:2147483640;background:rgba(7,26,58,.76);align-items:center;justify-content:center;padding:18px}
+#weatherClosureCard{position:relative;width:min(100%,480px);border:4px solid #b8e5ff;border-radius:22px;background:#fffdf6;color:#103765;text-align:center;padding:36px 25px 27px;box-shadow:0 24px 75px rgba(0,0,0,.35)}
+#weatherClosureCard .weather-icon{font-size:45px;line-height:1.1}
+#weatherClosureCard h2{font-size:31px;line-height:1.1;color:#103765;margin:12px 0}
+#weatherClosureCard p{font-size:17px;line-height:1.5;margin:12px 0}
+#weatherClosureCard .return{background:#d9f1ff;border-radius:12px;padding:12px;font-weight:800}
+#weatherClosureCard button{cursor:pointer}
+#weatherClosureClose{position:absolute;top:8px;right:12px;background:none;border:0;font-size:28px;color:#103765}
+#weatherClosureOkay{background:#123d73;color:#fff;border:0;border-radius:50px;padding:12px 35px;font-weight:800;font-size:16px;margin-top:12px}
 </style>
 
 </head>
 <body>
-<div class="topbar"><div class="wrap"><span>Wed–Sun · 6:00pm until sold out</span><span>Preorders close daily at 4:00pm</span><span>Peak hours 6:00pm–7:20pm</span></div></div>
 
-<div id="temporaryClosureHighlight" role="status" aria-live="polite">
-  <div class="closure-wrap">
-    <div class="closure-icon" aria-hidden="true">⚠</div>
-    <div class="closure-copy">
-      <strong>Closed Today — Wednesday 30 September</strong>
-      <span>Due to a technical issue, we are closed today. We’ll be back from Thursday onwards. Thank you for your understanding 💙</span>
-    </div>
+<div id="weatherClosureBanner" role="status">⚠️ CLOSED TONIGHT — Friday 6 November, due to severe weather conditions. We’ll be back tomorrow onwards. 💙</div>
+<div id="weatherClosureOverlay" role="dialog" aria-modal="true" aria-labelledby="weatherClosureTitle">
+  <div id="weatherClosureCard">
+    <button id="weatherClosureClose" aria-label="Close notice">×</button>
+    <div class="weather-icon" aria-hidden="true">⛈️</div>
+    <h2 id="weatherClosureTitle">CLOSED TONIGHT</h2>
+    <p><strong>Friday 6 November</strong></p>
+    <p>Due to severe weather conditions, Gyrolicious will be closed tonight.</p>
+    <p class="return">We’ll be back tomorrow onwards!</p>
+    <p>We apologise for the inconvenience and thank you for your understanding. 💙</p>
+    <button id="weatherClosureOkay">Got it</button>
   </div>
 </div>
+<script id="weather-closure-script">
+(function(){
+  const dateParts = new Intl.DateTimeFormat('en-NZ',{timeZone:'Pacific/Auckland',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const d = Object.fromEntries(dateParts.map(x=>[x.type,x.value]));
+  const localDate = d.year+'-'+d.month+'-'+d.day;
+  if(localDate !== '2026-11-06') return;
+  const banner=document.getElementById('weatherClosureBanner');
+  const overlay=document.getElementById('weatherClosureOverlay');
+  banner.style.display='block';
+  overlay.style.display='flex';
+  function close(){overlay.style.display='none'}
+  document.getElementById('weatherClosureClose').addEventListener('click',close);
+  document.getElementById('weatherClosureOkay').addEventListener('click',close);
+})();
+</script>
+
+<div class="topbar"><div class="wrap"><span>Wed–Sun · 6:00pm until sold out</span><span>Preorders close daily at 4:00pm</span><span>Peak hours 6:00pm–7:20pm</span></div></div>
+
+
 
 <header>
   <div class="wrap nav">
@@ -672,32 +647,7 @@ function closePreorderNotice(){
 </script>
 
 
-<script id="temporary-closure-highlight-script">
-(function () {
-  const banner = document.getElementById('temporaryClosureHighlight');
-  if (!banner) return;
 
-  const parts = new Intl.DateTimeFormat('en-NZ', {
-    timeZone: 'Pacific/Auckland',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  }).formatToParts(new Date());
-
-  const values = {};
-  for (const p of parts) {
-    if (p.type !== 'literal') values[p.type] = p.value;
-  }
-
-  const aucklandDate = `${values.year}-${values.month}-${values.day}`;
-
-  // Show only on Wednesday 30 September 2026.
-  // It automatically disappears at 12:00am Thursday 1 October (Auckland time).
-  if (aucklandDate === '2026-09-30') {
-    banner.style.display = 'block';
-  }
-})();
-</script>
 
 </body>
 </html>
